@@ -1,22 +1,29 @@
 /**Styling sheet for Cassidy Mayeda's personal website. Version 1*/
 
-.html {
+html {
 	font-family: sans-serif;
 	color: 603189;
 }
 
-.header {
+head {
 	background-color: f5f5f5;
 }
 
-.h1 {
+h1 {
 	text-align: center;
 	padding: 20px;
 }
 
-.div .ul {
+.interests {
 	text-align: left;
 	background-color: 67727a;
+	padding: 20px;
+	border: 2px black;
+}
+
+.recommendations {
+	text-align: left;
+	background-color: 73ad21;
 	padding: 20px;
 	border: 2px black;
 }
