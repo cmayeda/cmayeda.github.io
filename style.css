@@ -1,29 +1,85 @@
 /**Styling sheet for Cassidy Mayeda's personal website. Version 1*/
 
 html {
-	font-family: sans-serif;
-	color: 603189;
+	font-family: futura;
 }
 
-head {
-	background-color: f5f5f5;
+/*Name Block*/
+.name { 
+	background-color: #FF0059;
+	margin-top: -21px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
-h1 {
+.name h1 {
 	text-align: center;
+	font-size: 60px;
+	padding-top: 40px;
+	color: white; 
+	margin-top: -5px
+}
+
+.name p { 
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	padding-bottom: 30px;
+}
+
+/*Introduction Block*/
+.intro { 
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 30px;
+	margin-top: -20px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+h2 { 
+	text-align: center;
+}
+
+.interests {	
+	background-color: white;
+	color: #FF0059;
+	margin-top: -20px;
+	margin-left: -10px;
+	margin-right: -10px;
 	padding: 20px;
 }
 
-.interests {
-	text-align: left;
-	background-color: 67727a;
-	padding: 20px;
-	border: 2px black;
+.interests ul { 
+	padding-left: 230px;
 }
 
 .recommendations {
-	text-align: left;
-	background-color: 73ad21;
+	background-color: #00FDFF;
+	margin-top: -20px;
+	margin-left: -10px;
+	margin-right: -10px;
 	padding: 20px;
+}
+
+.recommendations p { 
+	text-align: center;
+}
+
+.recommendations ul { 
+	padding-left: 230px;
+}
+
+.contact {
+	text-align: center;
+	background-color: #FF0059;
+	padding: 20px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -10px;
 	border: 2px black;
 }
