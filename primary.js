@@ -1,91 +1,109 @@
 window.onload = function() { 
-	var clickCount = 0;
 	
-
 	createGrid();	
 	fillGrid();
 
-	/*
-	var BOX1 = document.getElementsByClassName('box')[0];
-	BOX1.addEventListener('click', function(){ 
-		clickCount++;
+	var direction = null; 
 		
-		if(clickCount%2 == 0) { 
-			BOX1.classList.remove("red");
+    document.onkeydown = checkKey; 
+
+    function checkKey(e) { 
+		e = e || window.event;
+    		
+		if(e.keyCode == 37) { //left
+		    direction = "left";	     
+		} else if(e.keyCode == 38) { //up
+		    direction = "up";
+		} else if(e.keyCode == 39) { //right
+		    direction = "right";
+		} else if(e.keyCode == 40) { //down
+		    direction = "down";
 		} else { 
-			BOX1.classList.add("red");
+		    //return;
 		}
-
-	})
-	*/
-
-	var play = function() { 
-
-		//var grid = document.getElementById('grid');
-		var direction = 0; 
-		
-    	document.onkeydown = function(e) {
-    		//e = e || window.event;
-    		//switch(e.which || e.keyCode) {		
-		        if(e.keyCode == 37) { //left
-		        	direction = -1;
-		        } else if(e.keyCode == 38) { //up
-		        	direction = 4;
-		        } else if(e.keyCode == 39) { //right
-		        	direction = 1;
-		        } else if(e.keyCode == 40) { //down
-		        	direction = -4;
-		        } else { 
-		        	return;
-		        }
-
-		        /*
-		        case 37: // left
-		        	direction = -1
-		        break;
-
-		        case 38: // up
-		        	direction = 4
-		        break;
-
-		        case 39: // right
-		        	direction = 1
-		        break;
-
-		        case 40: // down
-		        	direction = -4
-		        break;
-
-		        default: return; // exit this handler for other keys */
-		    
-		    e.preventDefault(); // prevent the default action (scroll / move caret)
-		    userPlay(direction);
-		};
-		
-
-	}
+		userPlay(direction);
+		console.log(direction);
+    }
 }
+
 
 var userPlay = function(direction) { 
 
-	for(var i = 0; i < 15; i++) { 
+	for(var i = 0; i < 16; i++) { 
 		
-		if(i+direction >= 16 || i+direction <= 0) { 
-			return;
-		} else { 
-			var BOX = document.getElementsByClassName('box')[i];
-			var currentClassList = BOX.className.split(" ");
-			var changeBOX = document.getElementsByClassName('box')[i+direction];
+		var BOX = document.getElementsByClassName('box')[i];
+		var currentClassList = BOX.className.split(" ");
+
+		if(direction == "up" && i-4 >= 0) {
+			
+			var changeBOX = document.getElementsByClassName('box')[i-4];
 			var changeBOXList = changeBOX.className.split(" ");
 
 			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
 
+				var color = currentClassList[1];
+				changeBOX.classList.add(color);
+				BOX.classList.remove(color);
+			} 
+
+		} else if(direction == "down" && i+4 < 16) {
+			
+			var changeBOX = document.getElementsByClassName('box')[i+4];
+			var changeBOXList = changeBOX.className.split(" ");
+
+			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+
+				var color = currentClassList[1];
+				changeBOX.classList.add(color);
+				BOX.classList.remove(color);
+				//i++;
+			} 
+
+		//might still need to change back to if/else for second condition 	
+		} else if(direction == "left" && i > 0) {
+ 
+
+
+
+
+
+
+
+
+ 
+				var changeBOX = document.getElementsByClassName('box')[i-1];
+				var changeBOXList = changeBOX.className.split(" ");
+
+				if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+
 					var color = currentClassList[1];
 					changeBOX.classList.add(color);
 					BOX.classList.remove(color);
-					i++;
+
+				}
+ 
+		} else if(direction == "right") {
+
+			if(i == 3, 7, 11, 15) { 
+				//do nothing
+			} else { 
+				var changeBOX = document.getElementsByClassName('box')[i+1];
+				var changeBOXList = changeBOX.className.split(" ");
+
+				if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+
+					var color = currentClassList[1];
+					changeBOX.classList.add(color);
+					BOX.classList.remove(color);
+
+				}
 			}
 
+ 
+			
+
+		} else { 
+			//? 
 		}
 
 
@@ -94,8 +112,21 @@ var userPlay = function(direction) {
 	}
 }
 
+//write to change 
+var changeColor = function(changeBox, currentClassList, direction) { 
 
+			var changeBOX = document.getElementsByClassName('box')[direction];
+			var changeBOXList = changeBOX.className.split(" ");
 
+			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+
+					var color = currentClassList[1];
+					changeBOX.classList.add(color);
+					BOX.classList.remove(color);
+					i++;
+			} 
+
+}
 
 
 
