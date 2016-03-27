@@ -55,7 +55,7 @@ var userPlay = function(direction) {
 			}
 
 		//might still need to change back to if/else for second condition 	
-		} else if(direction == "left" && i > 0) {
+		} else if(direction == "left" && i > 1) {
  
 			switch(i) { 
 				case 0: 
@@ -71,7 +71,7 @@ var userPlay = function(direction) {
 					changeColor(BOX, changeBOX);
 			}
  
-		} else if(direction == "right") {
+		} else if(direction == "right" && i < 15) {
 
 			switch(i) { 
 				case 3:
@@ -94,18 +94,90 @@ var userPlay = function(direction) {
 }
 
 //write to change 
-var changeColor = function(thing, nextThing) { 
+var changeColor = function(BOX, changeBOX) { 
 
-	var currentClassList = thing.className.split(" ");
-	var changeBOXList = nextThing.className.split(" ");
+	var currentClassList = BOX.className.split(" ");
+	var changeBOXList = changeBOX.className.split(" ");
+	
+	var BOXColor = currentClassList[1];
+	var changeColor = changeBOXList[1];
 
-			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+		if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+				var color = currentClassList[1];
+				changeBOX.classList.add(color);
+				BOX.classList.remove(color);
 
-					var color = currentClassList[1];
-					nextThing.classList.add(color);
-					thing.classList.remove(color);
-			} 
-	return;
+
+		//color combinations : primary colors 		
+		} else if(BOXColor == "red" && changeColor == "blue") { //red + blue = purple
+			changeBOX.classList.add("purple");
+			changeBOX.classList.remove("blue");
+			BOX.classList.remove("red");
+		} else if(BOXColor == "blue" && changeColor == "red") { 
+			changeBOX.classList.add("purple");
+			changeBOX.classList.remove("red");
+			BOX.classList.remove("blue");
+		} else if(BOXColor == "blue" && changeColor == "yellow") { //blue + yellow = green 
+			changeBOX.classList.add("green");
+			changeBOX.classList.remove("yellow");
+			BOX.classList.remove("blue");
+		} else if(BOXColor == "yellow" && changeColor == "blue") { 
+			changeBOX.classList.add("green");
+			changeBOX.classList.remove("blue");
+			BOX.classList.remove("yellow");
+		} else if(BOXColor == "red" && changeColor == "yellow") { //red + yellow = orange 
+			changeBOX.classList.add("orange"); 
+			changeBOX.classList.remove("yellow");
+			BOX.classList.remove("red");
+		} else if(BOXColor == "yellow" && changeColor == "red") { 
+			changeBOX.classList.add("orange"); 
+			changeBOX.classList.remove("red");
+			BOX.classList.remove("yellow");
+
+		//color combinations : 2ndary to brown 	
+		} else if(BOXColor == "purple" && changeColor == "green") { //purple + green = brown 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("green");
+			BOX.classList.remove("purple");
+		} else if(BOXColor == "green" && changeColor == "purple") { 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("purple");
+			BOX.classList.remove("green");
+		} else if(BOXColor == "green" && changeColor == "orange") { //green + orange = brown 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("orange");
+			BOX.classList.remove("green");
+		} else if(BOXColor == "orange" && changeColor == "green") { 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("green");
+			BOX.classList.remove("orange");		
+		} else if(BOXColor == "orange" && changeColor == "purple") { //orange + purple = brown 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("purple");
+			BOX.classList.remove("orange");	
+		} else if(BOXColor == "purple" && changeColor == "orange") { 
+			changeBOX.classList.add("brown"); 
+			changeBOX.classList.remove("orange");
+			BOX.classList.remove("purple");	
+
+		//color combinations : final 	
+		} else if(BOXColor == "brown" && changeColor == "brown") { 
+			changeBOX.classList.add("black"); 
+			changeBOX.classList.remove("brown");
+			BOX.classList.remove("brown");
+		} else if(BOXColor == "black" && changeColor == "black") { 
+			changeBOX.classList.add("white"); 
+			changeBOX.classList.remove("black");
+			BOX.classList.remove("black");
+		} else if(BOXColor == "white" && changeColor == "white") { 
+			BOX.classList.remove("white");
+		} else { 
+			//nothing? 
+		}
+
+
+
+
 }
 
 
