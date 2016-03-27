@@ -32,19 +32,11 @@ var userPlay = function(direction) {
 	for(var i = 0; i < 16; i++) { 
 		
 		var BOX = document.getElementsByClassName('box')[i];
-		var currentClassList = BOX.className.split(" ");
 
 		if(direction == "up" && i-4 >= 0) {
 			
 			var changeBOX = document.getElementsByClassName('box')[i-4];
-			var changeBOXList = changeBOX.className.split(" ");
-
-			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
-
-				var color = currentClassList[1];
-				changeBOX.classList.add(color);
-				BOX.classList.remove(color);
-			} 
+			changeColor(BOX, changeBOX);
 
 		} else if(direction == "down" && i+4 < 16) {
 			
@@ -59,14 +51,7 @@ var userPlay = function(direction) {
 					break;
 				default: 
 					var changeBOX = document.getElementsByClassName('box')[i+4];
-					var changeBOXList = changeBOX.className.split(" ");
-
-					if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
-
-						var color = currentClassList[1];
-						changeBOX.classList.add(color);
-						BOX.classList.remove(color);
-					}		
+					changeColor(BOX, changeBOX);	
 			}
 
 		//might still need to change back to if/else for second condition 	
@@ -83,15 +68,7 @@ var userPlay = function(direction) {
 					break;
 				default: 
 					var changeBOX = document.getElementsByClassName('box')[i-1];
-					var changeBOXList = changeBOX.className.split(" ");
-
-					if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
-
-						var color = currentClassList[1];
-						changeBOX.classList.add(color);
-						BOX.classList.remove(color);
-
-					}		
+					changeColor(BOX, changeBOX);
 			}
  
 		} else if(direction == "right") {
@@ -107,54 +84,31 @@ var userPlay = function(direction) {
 					break;
 				default: 				
 					var changeBOX = document.getElementsByClassName('box')[i+1];
-					var changeBOXList = changeBOX.className.split(" ");
-
-					if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
-
-						var color = currentClassList[1];
-						changeBOX.classList.add(color);
-						BOX.classList.remove(color);
-					}
-				
+					changeColor(BOX, changeBOX);
 			}		
 
 		} else { 
 			//? 
 		}
-
-
-			
-
 	}
 }
 
 //write to change 
-var changeColor = function(changeBox, currentClassList, direction) { 
+var changeColor = function(thing, nextThing) { 
 
-			var changeBOX = document.getElementsByClassName('box')[direction];
-			var changeBOXList = changeBOX.className.split(" ");
+	var currentClassList = thing.className.split(" ");
+	var changeBOXList = nextThing.className.split(" ");
 
 			if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
 
 					var color = currentClassList[1];
-					changeBOX.classList.add(color);
-					BOX.classList.remove(color);
-					i++;
+					nextThing.classList.add(color);
+					thing.classList.remove(color);
 			} 
-
+	return;
 }
 
 
-
-
-
-
-var allRed = function() { 
-	for(var i = 0; i < 15; i++) { 
-		var BOX = document.getElementsByClassName('box')[i]; 
-		BOX.classList.add('red');
-	}
-}	
 
 
 
