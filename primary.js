@@ -4,26 +4,39 @@ window.onload = function() {
 	fillGrid();
 
 	var direction = null; 
+	var count = 0;
 		
     document.onkeydown = checkKey; 
 
     function checkKey(e) { 
 		e = e || window.event;
     		
+
 		if(e.keyCode == 37) { //left
-		    direction = "left";	     
+		    direction = "left";	    
+		    count++;
 		} else if(e.keyCode == 38) { //up
 		    direction = "up";
+		    count++;
 		} else if(e.keyCode == 39) { //right
 		    direction = "right";
+		    count++;
 		} else if(e.keyCode == 40) { //down
 		    direction = "down";
+		    count++;
 		} else { 
 		    //return;
 		}
 		userPlay(direction);
-		console.log(direction);
+		console.log(direction); 
+		if( count%3 == 0 ) { 
+    		addBox();
+    	}
     }
+
+   
+
+
 }
 
 
@@ -34,11 +47,11 @@ var userPlay = function(direction) {
 		var BOX = document.getElementsByClassName('box')[i];
 
 		if(direction == "up" && i-4 >= 0) {
-			
-			var changeBOX = document.getElementsByClassName('box')[i-4];
-			changeColor(BOX, changeBOX);
 
-		} else if(direction == "down" && i+4 < 16) {
+			var changeBOX = document.getElementsByClassName('box')[i-4];
+			changeColor(BOX, changeBOX);			
+
+		} else if(direction == "down") {
 			
 			switch(i) { 
 				case 12: 
@@ -47,7 +60,7 @@ var userPlay = function(direction) {
 					break;
 				case 14: 
 					break;
-				case 16: 
+				case 15: 
 					break;
 				default: 
 					var changeBOX = document.getElementsByClassName('box')[i+4];
@@ -55,7 +68,7 @@ var userPlay = function(direction) {
 			}
 
 		//might still need to change back to if/else for second condition 	
-		} else if(direction == "left" && i > 1) {
+		} else if(direction == "left" && i > 0) {
  
 			switch(i) { 
 				case 0: 
@@ -86,6 +99,7 @@ var userPlay = function(direction) {
 					var changeBOX = document.getElementsByClassName('box')[i+1];
 					changeColor(BOX, changeBOX);
 			}		
+
 
 		} else { 
 			//? 
@@ -179,7 +193,6 @@ var changeColor = function(BOX, changeBOX) {
 
 
 }
-
 
 
 

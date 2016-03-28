@@ -56,7 +56,8 @@ body {
 
 .black { 
 	background-color: black;
-	border: 5px, white;
+	border: 10px;
+	border-color: white;
 }
 
 .white { 
