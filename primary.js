@@ -10,23 +10,20 @@ window.onload = function() {
 
     function checkKey(e) { 
 		e = e || window.event;
-    		
 
 		if(e.keyCode == 37) { //left
 		    direction = "left";	    
-		    count++;
 		} else if(e.keyCode == 38) { //up
 		    direction = "up";
-		    count++;
 		} else if(e.keyCode == 39) { //right
 		    direction = "right";
-		    count++;
 		} else if(e.keyCode == 40) { //down
 		    direction = "down";
-		    count++;
 		} else { 
 		    //return;
 		}
+
+		count++;
 		userPlay(direction);
 		console.log(direction); 
 		if( count%3 == 0 ) { 
@@ -34,42 +31,31 @@ window.onload = function() {
     	}
     }
 
-   
-
-
 }
-
 
 var userPlay = function(direction) { 
 
-	for(var i = 0; i < 16; i++) { 
-		
-		var BOX = document.getElementsByClassName('box')[i];
+	if(direction == "up") {
 
-		if(direction == "up" && i-4 >= 0) {
-
+		for(var i = 4; i <= 15; i++) { 
+			var BOX = document.getElementsByClassName('box')[i];
 			var changeBOX = document.getElementsByClassName('box')[i-4];
-			changeColor(BOX, changeBOX);			
+			changeColor(BOX, changeBOX);	
+		}
 
-		} else if(direction == "down") {
+	} else if(direction == "down") {
+
+		for(var i = 11; i >= 0; i--) { 
+			var BOX = document.getElementsByClassName('box')[i];
+			var changeBOX = document.getElementsByClassName('box')[i+4];
+			changeColor(BOX, changeBOX);	
+		}
+
+	} else if(direction == "left") {
+
+		for(var i = 0; i <= 15; i++){ 
 			
-			switch(i) { 
-				case 12: 
-					break;
-				case 13:
-					break;
-				case 14: 
-					break;
-				case 15: 
-					break;
-				default: 
-					var changeBOX = document.getElementsByClassName('box')[i+4];
-					changeColor(BOX, changeBOX);	
-			}
-
-		//might still need to change back to if/else for second condition 	
-		} else if(direction == "left" && i > 0) {
- 
+			var BOX = document.getElementsByClassName('box')[i];
 			switch(i) { 
 				case 0: 
 					break;
@@ -83,9 +69,13 @@ var userPlay = function(direction) {
 					var changeBOX = document.getElementsByClassName('box')[i-1];
 					changeColor(BOX, changeBOX);
 			}
- 
-		} else if(direction == "right" && i < 15) {
 
+		}
+
+	} else if(direction == "right") {
+
+		for(var i = 14; i >= 0; i--){ 
+			var BOX = document.getElementsByClassName('box')[i];
 			switch(i) { 
 				case 3:
 					break;
@@ -93,19 +83,17 @@ var userPlay = function(direction) {
 					break;
 				case 11: 
 					break;
-				case 16: 
-					break;
 				default: 				
 					var changeBOX = document.getElementsByClassName('box')[i+1];
 					changeColor(BOX, changeBOX);
 			}		
-
-
-		} else { 
-			//? 
 		}
+
+	} else { 
+			//? 
 	}
 }
+
 
 //write to change 
 var changeColor = function(BOX, changeBOX) { 
@@ -116,7 +104,7 @@ var changeColor = function(BOX, changeBOX) {
 	var BOXColor = currentClassList[1];
 	var changeColor = changeBOXList[1];
 
-		if(currentClassList.length >= 2 && changeBOXList.length <= 1) { 
+		if(currentClassList.length == 2 && changeBOXList.length == 1) { 
 				var color = currentClassList[1];
 				changeBOX.classList.add(color);
 				BOX.classList.remove(color);
@@ -124,7 +112,7 @@ var changeColor = function(BOX, changeBOX) {
 
 		//color combinations : primary colors 		
 		} else if(BOXColor == "red" && changeColor == "blue") { //red + blue = purple
-			changeBOX.classList.add("purple");
+			changeBOX.classList.add("purple"); //works 
 			changeBOX.classList.remove("blue");
 			BOX.classList.remove("red");
 		} else if(BOXColor == "blue" && changeColor == "red") { 
