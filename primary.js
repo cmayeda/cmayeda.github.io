@@ -104,25 +104,25 @@ var changeColor = function(BOX, changeBOX) {
 	var BOXColor = currentClassList[1];
 	var changeColor = changeBOXList[1];
 
+
 		if(currentClassList.length == 2 && changeBOXList.length == 1) { 
 				var color = currentClassList[1];
 				changeBOX.classList.add(color);
 				BOX.classList.remove(color);
 
-
 		//color combinations : primary colors 		
 		} else if(BOXColor == "red" && changeColor == "blue") { //red + blue = purple
 			changeBOX.classList.add("purple"); //works 
-			changeBOX.classList.remove("blue");
-			BOX.classList.remove("red");
+			changeBOX.classList.remove(changeColor);
+			BOX.classList.remove(BOXColor);
 		} else if(BOXColor == "blue" && changeColor == "red") { 
 			changeBOX.classList.add("purple");
-			changeBOX.classList.remove("red");
-			BOX.classList.remove("blue");
+			changeBOX.classList.remove(changeColor);
+			BOX.classList.remove(BOXColor);
 		} else if(BOXColor == "blue" && changeColor == "yellow") { //blue + yellow = green 
 			changeBOX.classList.add("green");
-			changeBOX.classList.remove("yellow");
-			BOX.classList.remove("blue");
+			changeBOX.classList.remove(changeColor);
+			BOX.classList.remove(BOXColor);
 		} else if(BOXColor == "yellow" && changeColor == "blue") { 
 			changeBOX.classList.add("green");
 			changeBOX.classList.remove("blue");
@@ -175,12 +175,65 @@ var changeColor = function(BOX, changeBOX) {
 			BOX.classList.remove("white");
 		} else { 
 			//nothing? 
-		}
-
-
+		} 
 
 
 }
+
+/*
+	switch(BOXColor) { 
+
+		case null: 
+			break;
+
+		//primary combinations 	
+		case "red": 
+			if(changeColor == "blue") { changeBOX.classList.add("purple"); }
+			else if(changeColor == "yellow") { changeBOX.classList.add("orange"); }
+			else { break; }
+		case "blue": 
+			if(changeColor == "yellow") { changeBOX.classList.add("green"); }
+			else if(changeColor == "red") { changeBOX.classList.add("purple"); }
+			else { break; }
+		case: "yellow":
+			if(changeColor == "red") { changeBOX.classList.add("orange"); }
+			else if(changeColor == "blue") { changeBOX.classList.add("green"); }
+			else ( break; )
+
+		//secondary combinations 
+		case "purple": 
+			if(changeColor == "green" || changeColor == "orange") {
+				changeBOX.classList.add("brown"); 
+			} else { 
+				break;
+			}
+		case "orange": 
+			if(changeColor == "green" || changeColor == "purple") { 
+				changeBOX.classList.add("brown");
+			} else { 
+				break; 
+			}
+		case "green": 
+			if(changeColor == "purple" || changeColor == "orange") { 
+				changeBOX.classList.add("brown");
+			} else { 
+				break; 
+			}
+
+		//final combinations 
+		case "brown": 
+			if(changeColor == "brown") { changeColor.classList.add("black"); } 
+			else { break; }
+		case "black": 
+			if(changeColor == "black") { changeColor.classList.add("white"); }
+			else { break; }
+		case "white": 
+			break; 
+	}
+
+	BOX.classList.remove(BOXColor);
+	changeBOX.classList.remove(changeColor);
+	*/
 
 
 
