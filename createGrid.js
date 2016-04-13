@@ -29,8 +29,7 @@ var fillGrid = function() {
 
 var addBox = function() { 
 
-	var list = [0, 1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 14, 16];
-	var num = list[Math.floor(Math.random()*13)];
+	var num = Math.floor(Math.random()*15);
 	var BOX = document.getElementsByClassName('box')[num];
 
 	if(BOX.classList.length >= 2) { 
