@@ -5,6 +5,7 @@ window.onload = function() {
 
 	var direction = null; 
 	var count = 0;
+	document.getElementById("score").innerHTML = 0;
 		
     document.onkeydown = checkKey; 
 
@@ -29,6 +30,7 @@ window.onload = function() {
 		if( count%3 == 0 ) { 
     		addBox();
     	}
+
     }
 
 }
@@ -105,13 +107,13 @@ var changeColor = function(BOX, changeBOX) {
 	var changeColor = changeBOXList[1];
 
 
-		if(currentClassList.length == 2 && changeBOXList.length == 1) { 
+		if(currentClassList.length >= 2 && changeBOXList.length == 1) { 
 
 				var color = currentClassList[1];
 				changeBOX.classList.add(color);
 				BOX.classList.remove(color);
 
-		} else if(currentClassList.length == 2 && changeBOXList.length == 2) { 
+		} else if(currentClassList.length >= 2 && changeBOXList.length >= 2) { 
 			
 			//color combinations : primary colors 
 	 		if(BOXColor == "red" && changeColor == "blue") { //red + blue = purple
@@ -178,26 +180,24 @@ var changeColor = function(BOX, changeBOX) {
 
 				BOX.classList.remove("white");
 				//something to cumulate a score? 
-				
+				changeScore();
+
 			} else { 
 				//error, should not happen 
 			}
-
+			
 		}
+}
 
 
+var changeScore = function() { 
 
-
-
-
-		
-
-	
-
-
-
+	var oldScore = document.getElementById("score").innerHTML; 
+	var oldScoreNum = parseInt(oldScore);
+	document.getElementById("score").innerHTML = oldScoreNum + 10;
 
 }
+
 
 /*
 	switch(BOXColor) { 

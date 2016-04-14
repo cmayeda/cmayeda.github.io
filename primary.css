@@ -66,6 +66,13 @@ body {
 	background-color: white;
 }
 
+#scoreBoard { 
+	font-family: futura;
+	color: #939393;
+	font-size: 20;
+	text-align: center;
+}
+
 #credits { 
 	margin-top: 50px;
 	text-align: left;
