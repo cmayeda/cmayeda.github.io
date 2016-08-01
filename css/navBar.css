@@ -1,0 +1,9 @@
+.navBar { 
+	font: futura;
+	background-color: black;
+}
+
+.navBar ul { 
+	list-style: none;
+	
+}

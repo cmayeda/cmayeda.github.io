@@ -2,6 +2,7 @@
 
 html {
 	font-family: futura;
+	text-align: center;
 }
 
 /*Name Block*/
@@ -41,37 +42,12 @@ html {
 	margin-right: -10px;
 }
 
-h2 { 
-	text-align: center;
-}
-
 .interests {	
-	background-color: white;
 	color: #FF0059;
 	margin-top: -20px;
 	margin-left: -10px;
 	margin-right: -10px;
 	padding: 20px;
-}
-
-.interests ul { 
-	padding-left: 230px;
-}
-
-.recommendations {
-	background-color: #00FDFF;
-	margin-top: -20px;
-	margin-left: -10px;
-	margin-right: -10px;
-	padding: 20px;
-}
-
-.recommendations p { 
-	text-align: center;
-}
-
-.recommendations ul { 
-	padding-left: 230px;
 }
 
 .contact {
