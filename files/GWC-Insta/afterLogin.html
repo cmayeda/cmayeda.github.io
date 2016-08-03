@@ -23,13 +23,14 @@
 		}
 
 		var foo = getParameterByName('code');
-		console.log("afd" + foo);
+		console.log(foo);
+		document.getElementById("button").href = "https://api.instagram.com/v1/tags/girlswhocode/media/recent?access_token=" + foo;
 
 	</script>
 
 	<div class="container">
 
-		<button><a href="https://api.instagram.com/v1/tags/girlswhocode/media/recent?access_token=8597f7f703514b07b938a43ac495d4ac">Get my photos</a></button>
+		<button><a id="button">Get my photos</a></button>
 		
 
 		<!-- <img src="https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&access_token=1d31e86b067b49e69a4e26fbe12c027c"> --> 
