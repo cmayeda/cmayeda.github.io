@@ -5,12 +5,26 @@ html {
 	text-align: center;
 }
 
+.container { 
+	margin-top: -16px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+ul { 
+	list-style: none;
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+li { 
+	text-align: left;
+}
+
 /*Name Block*/
 .name { 
 	background-color: #FF0059;
-	margin-top: -21px;
-	margin-left: -10px;
-	margin-right: -10px;
 }
 
 .name h1 {
@@ -28,34 +42,36 @@ html {
 	padding-bottom: 30px;
 }
 
-/*Introduction Block*/
-.intro { 
-	text-align: center;
-	background-color: black;
-	color: white;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-bottom: 30px;
-	margin-top: -20px;
-	margin-left: -10px;
-	margin-right: -10px;
-}
 
+/*Interests*/
 .interests {	
 	color: #FF0059;
-	margin-top: -20px;
-	margin-left: -10px;
-	margin-right: -10px;
-	padding: 20px;
+	padding-top: 20px;
+	padding-bottom: 40px;
 }
 
+/*Projects*/
+.projects { 
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+
+.projects a { 
+	text-decoration: none;
+	color: white;
+}
+
+.projects a:hover { 
+	color: #FF0059;
+	text-decoration: underline;
+}
+
+/*Contact*/
 .contact {
-	text-align: center;
 	background-color: #FF0059;
 	padding: 20px;
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-bottom: -10px;
-	border: 2px black;
+
 }
