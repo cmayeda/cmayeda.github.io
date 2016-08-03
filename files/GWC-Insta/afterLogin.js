@@ -1,0 +1,6 @@
+function getHashtagPhotos(hash) {
+	
+	
+
+
+}
