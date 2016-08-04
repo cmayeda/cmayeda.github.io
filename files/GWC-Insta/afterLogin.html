@@ -35,9 +35,10 @@
 		}
 
 		var access_token = getParameterByName("access_token"); 
-		console.log(access_token);
+		console.log("acc "+access_token);
 		var user_id = "hapastudent";
 		var url = "https://api.instagram.com/v1/users/self/?access_token="+access_token+"&callback=?";
+		console.log(url);
 		$.getJSON(url, function(data) {
 			console.log(data);
 		    // $("body").append("<img src='"+data.data.profile_picture+"' />");
