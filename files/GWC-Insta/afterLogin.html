@@ -38,7 +38,7 @@
 
 		var access_token = foo;   
 		var user_id = "hapastudent";
-		var url = "https://api.instagram.com/v1/users/hapastudent/media/recent/?access_token="+access_token;
+		var url = "https://api.instagram.com/v1/users/hapastudent/media/recent/?access_token="+access_token+"&callback=?";
 		$.getJSON(url, function(data) {
 		    $("body").append("<img src='"+data.data.profile_picture+"' />");
 		});
