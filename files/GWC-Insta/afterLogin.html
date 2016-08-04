@@ -20,28 +20,27 @@
 
 
 	</div>
-	<div id="instafeed"></div>
-
-	<script type="text/javascript" src="instafeed.min.js"></script>
 
 	<script type="text/javascript">
-		var feed = new Instafeed({
-	        get: 'tagged',
-	        tagName: 'awesome',
-	        clientId: 'f3f7714ce032462683f53a9d4d3a4225'
-	    });
-	    feed.run();
-		// function getParameterByName(name, url) {
-		//     if (!url) url = window.location.href;
-		//     name = name.replace(/[\[\]]/g, "\\$&");
-		//     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-		//         results = regex.exec(url);
-		//     if (!results) return null;
-		//     if (!results[2]) return '';
-		//     return decodeURIComponent(results[2].replace(/\+/g, " "));
-		// }
+		function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
 
-		// var foo = getParameterByName('code');
+		var foo = getParameterByName('code');
+
+		var access_token = foo;   
+		var user_id = "hapastudent";
+		var url = "https://api.instagram.com/v1/users/"+user_id+"?access_token="+access_token+"&callback=?";
+		$.getJSON(url, function(data) {
+		    $("body").append("<img src='"+data.data.profile_picture+"' />");
+		});
+
 		// console.log(foo);
 		// document.getElementById("button").href = "https://api.instagram.com/v1/tags/girlswhocode/media/recent?access_token=" + foo;
 
