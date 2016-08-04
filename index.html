@@ -4,60 +4,80 @@
 	<head>
 		
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="css/navBar.css" rel="stylesheet" type="text/css">
+		<link href="css/navStyle.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
 
 	</head>
 
 <body>
 
+	<!-- UPPER NAV -->
+	<div class="container">
+		<ul class="navbar">
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">PROJECTS</a></li>
+			<li><a href="#">POETRY & DESIGN</a></li>
+		</ul>
+	</div>
+
 	<div class="container">
 		<div class="name">
 			<h1>Cassidy Mayeda</h1>
-			<p>Barnard College Junior</p> 
-		</div>	
-	</div>
-
-<!-- 	<div class="container">
-		<div class="navBar">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Poetry</a></li>
-			</ul>
-		</div>
-	</div> -->
-
-	<div class="container">
-		<div class="interests">
-			<h2>Interests</h2>
-			<ul>
-				<li>User Interface & Design</li>
-				<li>Brazilian Jiu Jitsu</li>
-				<li>Poetry</li>
-				<li>Backpacking & Hiking</li>
-			</ul>
 		</div>
 	</div>
 
-
-
 	<div class="container">
-		<div class="projects">
-			<h2>Projects</h2>
+		<div id="aboutMe"> 
 
-			<ul class="project_list">
-				<li><a href="files/GWC-Insta/GWC_pics.html">GWC Photos Page</a></li>
-				<li><a href="primary/primary.html">Primary</a></li>
-			</ul>	
+			<img src="images/id_photo.jpg">
+			<h1>About Me</h1>
+			<p>Hi! My name is Cassidy Mayeda and you're currently visiting my personal webpage.</p>
+			<h2>BARNARD COLLEGE</h2>
+			<h3>AMERICAN STUDIES MAJOR:</h3>
+			<h3>FOCUS IN DIGITAL HUMANITIES</h3>
+
 		</div>
 	</div>	
 
 	<div class="container">
-		<div class="contact">
-			<h2>Contact</h2>
-			<p>Email: cassidymayeda@gmail.com<p> 
+		<div id="jobHist">
+
+		</div>	
+	</div>
+
+	<div class="container">
+		<div id="clubs">
+
 		</div>
 	</div>
+
+
+	<!-- LOWER NAV -->
+	<div class="container">
+		<ul class="btnavbar">
+			<li class="impt"><a href="#">Home</a></li>
+			<li class="impt">
+				<a href="#">Projects</a>
+				<ul>
+					<li><a href="#">Primary</a></li>
+					<li><a href="#">GWC-Insta</a></li>
+				</ul>
+			</li>
+			<li class="impt">
+				<a href="#">Poetry & Design</a>
+				<ul>
+					<li><a href="#">Published</a></li>
+					<li><a href="#">Spoken Word</a></li>
+					<li><a href="#">Visuals</a></li>
+				</ul>
+			</li>
+			<li class="impt" id="contact">
+				<p>Cassidy Mayeda</p>
+				<p>cassidymayeda@gmail.com</p>
+			</li>
+		</ul>
+	</div>
+
 
 </body>
 

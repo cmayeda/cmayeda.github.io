@@ -1,77 +1,26 @@
-/**Styling sheet for Cassidy Mayeda's personal website. Version 1*/
+/**Styling sheet for Cassidy Mayeda's personal website. Version 2*/
 
 html {
 	font-family: futura;
-	text-align: center;
 }
 
 .container { 
-	margin-top: -16px;
-	margin-left: -10px;
-	margin-right: -10px;
+
 }
 
-ul { 
-	list-style: none;
-	width: 200px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-li { 
-	text-align: left;
-}
-
-/*Name Block*/
+/* -- NAME -- */
 .name { 
-	background-color: #FF0059;
+	height: 200px;
 }
-
 .name h1 {
-	text-align: center;
-	font-size: 60px;
-	padding-top: 40px;
-	color: white; 
-	margin-top: -5px
-}
 
-.name p { 
-	text-align: center;
-	font-size: 20px;
-	color: white;
-	padding-bottom: 30px;
 }
 
 
-/*Interests*/
-.interests {	
-	color: #FF0059;
-	padding-top: 20px;
-	padding-bottom: 40px;
-}
+/* -- ABOUT ME -- */
 
-/*Projects*/
-.projects { 
-	background-color: black;
-	color: white;
-	padding-top: 20px;
-	padding-bottom: 40px;
-}
-
-
-.projects a { 
-	text-decoration: none;
-	color: white;
-}
-
-.projects a:hover { 
-	color: #FF0059;
-	text-decoration: underline;
-}
-
-/*Contact*/
-.contact {
-	background-color: #FF0059;
-	padding: 20px;
-
+#aboutMe img { 
+	height: 300px;
+	width: auto;
+	border-radius: 50%;
 }

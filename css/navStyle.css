@@ -1,9 +1,5 @@
-body { 
-	background-color: blue;
-	font-family: Helvetica;
-}
 
-/*TOP NAVIGATION BAR*/
+/* -- TOP NAVIGATION BAR -- */
 .navbar { 
 	list-style: none;
 	background-color: black;
@@ -37,7 +33,8 @@ body {
 	margin-bottom: 0px;
 }
 
-/*BOTTOM NAVIGATION BAR*/
+
+/* -- BOTTOM NAVIGATION BAR -- */
 
 .btnavbar { 
 	background-color: black;
@@ -46,6 +43,7 @@ body {
 	margin-right: -8px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	color: white;
 }
 
 .btnavbar ul {
@@ -65,3 +63,21 @@ body {
 	text-decoration: none;
 	color: white;
 }
+
+#contact { 
+	text-align: right;
+	float: right;
+}
+
+#contact p { 
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+
+
+
+
+
