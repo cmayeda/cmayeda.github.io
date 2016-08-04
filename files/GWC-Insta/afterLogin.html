@@ -34,7 +34,7 @@
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
 
-		var access_token = getParameterByName("access_token"); 
+		var type = window.location.hash.substr(1);
 		console.log("acc "+access_token);
 		var user_id = "hapastudent";
 		var url = "https://api.instagram.com/v1/users/self/?access_token="+"335425257.f3f7714.1ddad1bde4924b8aa7c7488d86defe37"+"&callback=?";
