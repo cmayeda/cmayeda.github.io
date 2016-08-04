@@ -34,9 +34,8 @@
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
 
-		var foo = getParameterByName('access_token');
-
-		var access_token = foo;   
+		var access_token = getParameterByName('access_token'); 
+		console.log(access_token);
 		var user_id = "hapastudent";
 		var url = "https://api.instagram.com/v1/users/self/?access_token="+access_token+"&callback=?";
 		$.getJSON(url, function(data) {
