@@ -27,7 +27,7 @@
 		var access_token = window.location.hash.substr(1);
 		console.log(access_token); 
 		var user_id = "hapastudent";
-		var url = "https://api.instagram.com/v1/tags/girlswhocode/media/recent?"+access_token+"&callback=?";
+		var url = "https://api.instagram.com/v1/tags/awesome/media/recent?"+access_token+"&callback=?";
 		console.log(url);
 		$.getJSON(url, function(data) {
 			console.log(data);
