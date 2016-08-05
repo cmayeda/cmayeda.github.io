@@ -1,8 +1,10 @@
 .banner { 
-	background-image: url("../images/greenBanner.jpeg");
+	background-image: url("https://cmayeda.github.io/images/greenBanner.jpg");
+	/*background-image: url("http://cmayeda.github.io/images/nameBanner2.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 400px;
-	position: fixed;
-
+	height: 200px;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
 }
