@@ -1,0 +1,8 @@
+.banner { 
+	background-image: url("../images/greenBanner.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	position: fixed;
+
+}
