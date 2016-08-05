@@ -17,10 +17,20 @@ html {
 #smName { 
 	color: white;
 	display: inline-block;
-	font-size: 20px;
 	padding-left: 30px;
 	padding-right: 30px;
+}
 
+#smName h1 {
+	display: inline-block;
+	font-size: 20px;
+}
+
+#smName img {
+	height: 20px;
+	width: auto;
+	display: inline-block;
+	padding-left: 10px;
 }
 
 .navbar a { 

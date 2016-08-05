@@ -1,6 +1,5 @@
 .banner { 
 	background-image: url("https://cmayeda.github.io/images/greenBanner.jpg");
-	/*background-image: url("http://cmayeda.github.io/images/nameBanner2.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -8,3 +7,13 @@
 	margin-left: -8px;
 	margin-right: -8px;
 }
+
+.banner h1 { 
+	font-size: 80px;
+	margin-top: 0px;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	padding-left: 40px;
+	display: inline-block;
+}
+
