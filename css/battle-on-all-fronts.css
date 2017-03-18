@@ -5,6 +5,14 @@ body {
 	text-align: center;
 }
 
+#header h1 { 
+	padding-top: 40px;
+}
+
+#header h3 { 
+	padding-bottom: 20px;
+}
+
 p {
 	width: 75%;
 	margin-left: auto;
@@ -15,13 +23,13 @@ p {
 	text-align: left;
 }
 
-h2 {
-
+#main h2 {
+	padding-top: 25px;
 }
 
 img { 
 	height: auto;
-	width: 90%;
+	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 20px;
@@ -59,3 +67,26 @@ li p {
 	padding: 0;
 	margin: 0;
 }
+
+
+#footnotes p { 
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0px;
+	width: 80%;
+}
+
+#footnotes { 
+	padding-bottom: 60px;
+	padding-top: 20px;
+
+}
+
+
+
+
+
+
+
