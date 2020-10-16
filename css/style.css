@@ -5,9 +5,20 @@
 	clear: both;
 	position: relative;
 }
+.col { 
+	display: inline-block;
+	width: 30%; /* will need to change this when making responsive for mobile */
+	padding-top: 30px;
+	margin-left: 7%;
+	margin-right: 7%;
+	vertical-align: text-top; 
+}
+.row { 
+	/*margin-top: -50px*/
+	border: 3px solid black;
+}
 
 /* -- ABOUT ME -- */
-
 #aboutMe { 
 	margin-top: 0px;
 	margin-left: -8px;
@@ -19,65 +30,21 @@
 	background: -webkit-linear-gradient(top,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
 	background: linear-gradient(to bottom,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 );
-
 }
-
 #aboutMe img { 
 	height: 300px;
 	width: auto;
 	border-radius: 50%;
-	border: 20px solid black;
-	margin-left: 10%;
-	margin-right: 10px;
 }
-
-.col { 
-	display: inline-block;
-	width: 300px;
-	margin-top: 70px;
-	margin-left: 10px;
-	margin-right: 10px;
-	vertical-align: text-top; 
-}
-
 #aboutText { 
-	margin-left: 13%;
-}
-
-#aboutText img { 
-	/*font-size: 60px;*/
-	margin-top: 0px;
-	margin-bottom: 20px;
-	border: none;
-	border-radius: 0;
-	width: 90%;
-	height: auto;
-	margin-left: 0px;
-}
-
-#aboutText h2 { 
-	font-size: 30px;
-	margin-bottom: 10px;
-	margin-top: 35px;
-}
-
-#aboutText h3 { 
-	font-size: 18px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	opacity: 0.7;
 
 }
-
-
 
 /* -- PROFESSIONAL EXPERIENCE -- */
-
 #profHist { 
-	padding-top: 20px;
-	margin-left: 8%;
-}
 
+}
+/* formatting company logos */
 #profHist img { 
 	display: inline-block;	
 	position: relative;
@@ -89,26 +56,17 @@
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-
 #pfTitle { 
 	width: 33%;
 }
-
-#profHist .row { 
-	/*margin-top: -50px*/
-	border: 3px solid black;
-}
-
 #gwc { 
 	width: 300px;
 }
-
 #mgoosh { 
 	width: 175px;
 	padding-top: 70px;
 	margin-right: 30px;
 }
-
 #spoon { 
 	width: 200px;
 	margin-left: 20px;
