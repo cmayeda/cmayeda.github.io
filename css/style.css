@@ -1,41 +1,10 @@
-/**Styling sheet for Cassidy Mayeda's personal website. Version 2*/
+/* Style sheet for Cassidy Mayeda's personal website. Updated: October, 2020 */
 
 .container { 
 	display: block;
 	clear: both;
 	position: relative;
 }
-
-/* -- NAME -- */
-.name { 
-	background-image: url("http://cmayeda.github.io/images/nameBanner2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 200px;
-	margin-top: -8px;
-	margin-left: -8px;
-	margin-right: -8px;
-}
-
-.name h1 {
-	font-size: 110px;
-	margin-top: 0px;
-	padding-left: 30px;
-	padding-top: 30px;
-	display: inline-block;
-}
-
-.name img { 
-	height: 100px;
-	width: auto;
-	display: inline-block;
-	padding-left: 30px;
-	padding-top: 50px;
-	position: absolute;
-}
-
-
-
 
 /* -- ABOUT ME -- */
 
