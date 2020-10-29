@@ -1,5 +1,9 @@
 /* Style sheet for Cassidy Mayeda's personal website. Updated: October, 2020 */
 
+html { 
+	font-family: 'Rubik';
+}
+
 .container { 
 	display: block;
 	clear: both;
@@ -12,10 +16,6 @@
 	margin-left: 7%;
 	margin-right: 7%;
 	vertical-align: text-top; 
-}
-.row { 
-	/*margin-top: -50px*/
-	border: 3px solid black;
 }
 
 /* -- ABOUT ME -- */
@@ -31,47 +31,6 @@
 	background: linear-gradient(to bottom,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 );
 }
-#aboutMe img { 
-	height: 300px;
-	width: auto;
-	border-radius: 50%;
-}
-#aboutText { 
-
-}
-
-/* -- PROFESSIONAL EXPERIENCE -- */
-#profHist { 
-
-}
-/* formatting company logos */
-#profHist img { 
-	display: inline-block;	
-	position: relative;
-	height: auto;
-	vertical-align: top;
-	padding-right: 10px;
-	padding-left: 10px;
-	margin: 0;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-#pfTitle { 
-	width: 33%;
-}
-#gwc { 
-	width: 300px;
-}
-#mgoosh { 
-	width: 175px;
-	padding-top: 70px;
-	margin-right: 30px;
-}
-#spoon { 
-	width: 200px;
-	margin-left: 20px;
-}
-
 
 
 
