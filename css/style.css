@@ -4,40 +4,66 @@ html {
 	font-family: 'Rubik';
 }
 
+/* -- general formatting -- */
 .container { 
 	display: block;
 	clear: both;
 	position: relative;
+	margin-left: 7%;
+	margin-right: 7%;
 }
 .col { 
 	display: inline-block;
 	width: 30%; /* will need to change this when making responsive for mobile */
-	padding-top: 30px;
-	margin-left: 7%;
-	margin-right: 7%;
-	vertical-align: text-top; 
+	padding-top: 20px;
+
 }
 
-/* -- ABOUT ME -- */
-#aboutMe { 
-	margin-top: 0px;
-	margin-left: -8px;
-	margin-right: -8px;
-	margin-bottom: 60px;
-
-	background: #dbdbdb;
-	background: -moz-linear-gradient(top,  #dbdbdb 0%, #ffffff 24%, #ffffff 44%);
-	background: -webkit-linear-gradient(top,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
-	background: linear-gradient(to bottom,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 );
+/* -- top banner -- */
+#candy-banner { 
+	padding-top: 50px;
+	height: 140px;
+	font-family: 'Trirong';
+}
+#candy-banner img { 
+	width: 15%;
+	max-width: 130px;
+	min-width: 70px;
+	display: inline-block;
+}
+#candy-banner h1 { 
+	display: inline-block;
+	width: 50%;
+	font-size: 40px;
+	font-weight: 300;
+	font-style: italic;
+	margin-left: 3%;
+	vertical-align: top;
+	margin-top: 14px;
+	margin-bottom: 0px;
+	border-bottom: 4px dashed #565EEC;
 }
 
-
-
-
-
-
-
+/* -- about -- */
+#about { 
+	width: 100%;
+	text-align: center;
+}
+#about h2 span { 
+	font-weight: 600;
+	font-size: 60px;
+}
+#about h2 { 
+	font-family: 'Trirong';
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+}
+#about li { 
+	list-style-type: none;
+	text-align: left;
+	padding-left: 45%;
+}
 
 
 
